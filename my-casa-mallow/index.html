@@ -1,0 +1,14 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Casa Mallow</title><meta name="theme-color" content="#f8f2ee"><meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>@font-face{font-family:Lexend;font-weight:600;src:url(../casa-mallow/vendor/lexend-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Atkinson Hyperlegible';src:url(../casa-mallow/vendor/atkinson-hyperlegible-latin-400-normal.woff2) format('woff2')}
+body{font:18px/1.6 'Atkinson Hyperlegible',Verdana,sans-serif;color:#4f1a2e;background:#f8f2ee;max-width:520px;margin:0 auto;padding:48px 16px;text-align:center}
+h1{font:600 32px/1.2 Lexend,Verdana,sans-serif;margin:16px 0 8px}a.btn{display:inline-block;margin-top:16px;padding:14px 28px;border-radius:999px;background:#653446;color:#fffaf6;text-decoration:none;font-weight:700}</style></head>
+<body><img src="icons/icon-192.png" width="112" height="112" alt="" style="border-radius:28px"><h1>My Casa Mallow</h1>
+<p id="msg">Opening your Casa Mallow…</p><a class="btn" id="go" href="https://claude.ai/artifact/Xt1oLSn7Ld7zSCob9pGGC7">Open Casa Mallow</a>
+<script>
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+const HUB='https://claude.ai/artifact/Xt1oLSn7Ld7zSCob9pGGC7';
+const installed=matchMedia('(display-mode: standalone)').matches||matchMedia('(display-mode: window-controls-overlay)').matches||new URLSearchParams(location.search).has('app');
+if(installed){location.replace(HUB)}else{document.getElementById('msg').textContent='To get the Casa Mallow icon: open the browser menu and choose Install (or Add to home screen). After that, the icon opens your Casa Mallow straight away.'}
+</script></body></html>
